@@ -1,5 +1,11 @@
 package org.rzo.yajsw.tray;
 
+import com.jeta.forms.components.border.TitledBorderBottom;
+import com.jeta.forms.components.border.TitledBorderLabel;
+import com.jeta.forms.components.border.TitledBorderSide;
+import com.jeta.open.i18n.I18NUtils;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
@@ -8,7 +14,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,12 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
-import com.jeta.forms.components.border.TitledBorderBottom;
-import com.jeta.forms.components.border.TitledBorderLabel;
-import com.jeta.forms.components.border.TitledBorderSide;
-import com.jgoodies.forms.layout.CellConstraints;
-import com.jgoodies.forms.layout.FormLayout;
 
 
 public class ConsoleForm extends JPanel
@@ -65,10 +64,10 @@ public class ConsoleForm extends JPanel
    JButton _EXIT_TRAY_ICON_BUTTON = new JButton();
    JButton _START_OUTPUT_BUTTON = new JButton();
    JButton _PAUSE_OUTPUT_BUTTON = new JButton();
-   JTextField __OUTPUT_FILTER = new JTextField();
    JButton _CLEAR_OUTPUT_BUTTON = new JButton();
    JButton _GC_BUTTON = new JButton();
    JButton _DUMP_HEAP_BUTTON = new JButton();
+   JTextField __OUTPUT_FILTER = new JTextField();
 
    /**
     * Default constructor
@@ -180,7 +179,7 @@ public class ConsoleForm extends JPanel
    public JPanel createPanel()
    {
       JPanel jpanel1 = new JPanel();
-      FormLayout formlayout1 = new FormLayout("FILL:4DLU:NONE,FILL:4DLU:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,RIGHT:100PX:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,FILL:4DLU:NONE,FILL:4DLU:NONE,RIGHT:100PX:NONE,FILL:4DLU:NONE,FILL:100PX:NONE,FILL:4DLU:NONE,FILL:100PX:NONE,FILL:4DLU:NONE","CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,FILL:238PX:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,FILL:14DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:4DLU:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:4DLU:NONE,CENTER:4DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE");
+      FormLayout formlayout1 = new FormLayout("FILL:4DLU:NONE,FILL:4DLU:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,RIGHT:100PX:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,LEFT:100PX:NONE,FILL:4DLU:NONE,RIGHT:100PX:NONE,FILL:4DLU:NONE,FILL:4DLU:GROW(1.0),FILL:4DLU:NONE,RIGHT:100PX:NONE,FILL:4DLU:NONE,FILL:100PX:NONE,FILL:4DLU:NONE,FILL:100PX:NONE,FILL:4DLU:NONE","CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,FILL:238PX:GROW(1.0),CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,FILL:14DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE,CENTER:DEFAULT:NONE,CENTER:4DLU:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:4DLU:NONE,CENTER:4DLU:NONE,CENTER:DEFAULT:NONE,CENTER:2DLU:NONE");
       CellConstraints cc = new CellConstraints();
       jpanel1.setLayout(formlayout1);
 
@@ -466,14 +465,6 @@ public class ConsoleForm extends JPanel
       _PAUSE_OUTPUT_BUTTON.setToolTipText("Pause Console Output");
       jpanel1.add(_PAUSE_OUTPUT_BUTTON,cc.xy(8,2));
 
-      JLabel jlabel19 = new JLabel();
-      jlabel19.setFont(new Font("Tahoma",Font.BOLD,11));
-      jlabel19.setText("Filter");
-      jpanel1.add(jlabel19,cc.xy(16,2));
-
-      __OUTPUT_FILTER.setName("_OUTPUT_FILTER");
-      jpanel1.add(__OUTPUT_FILTER,cc.xywh(18,2,3,1));
-
       _CLEAR_OUTPUT_BUTTON.setName("CLEAR_OUTPUT_BUTTON");
       _CLEAR_OUTPUT_BUTTON.setToolTipText("Clear Output");
       jpanel1.add(_CLEAR_OUTPUT_BUTTON,cc.xy(10,2));
@@ -487,6 +478,14 @@ public class ConsoleForm extends JPanel
       _DUMP_HEAP_BUTTON.setName("DUMP_HEAP_BUTTON");
       _DUMP_HEAP_BUTTON.setToolTipText("Thread Dump");
       jpanel1.add(_DUMP_HEAP_BUTTON,cc.xy(10,17));
+
+      JLabel jlabel19 = new JLabel();
+      jlabel19.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel19.setText("Filter");
+      jpanel1.add(jlabel19,cc.xy(12,2));
+
+      __OUTPUT_FILTER.setName("_OUTPUT_FILTER");
+      jpanel1.add(__OUTPUT_FILTER,cc.xywh(14,2,7,1));
 
       addFillComponents(jpanel1,new int[]{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 },new int[]{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 });
       return jpanel1;
