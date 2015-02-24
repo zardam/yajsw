@@ -185,7 +185,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel1 = new JLabel();
       jlabel1.setBackground(new Color(204,204,204));
-      jlabel1.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel1.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel1.setOpaque(true);
       jlabel1.setText("Output");
       jpanel1.add(jlabel1,new CellConstraints(4,2,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
@@ -194,17 +194,17 @@ public class ConsoleForm extends JPanel
       JScrollPane jscrollpane1 = new JScrollPane();
       jscrollpane1.setViewportView(_output);
       jscrollpane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-      jscrollpane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+      jscrollpane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
       jpanel1.add(jscrollpane1,cc.xywh(4,4,17,1));
 
       JLabel jlabel2 = new JLabel();
-      jlabel2.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel2.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel2.setText("Input (CR terminated)");
       jpanel1.add(jlabel2,cc.xy(4,6));
 
       JLabel jlabel3 = new JLabel();
       jlabel3.setBackground(new Color(204,204,204));
-      jlabel3.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel3.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel3.setOpaque(true);
       jlabel3.setText("State ");
       jlabel3.setHorizontalAlignment(JLabel.LEFT);
@@ -244,7 +244,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel4 = new JLabel();
       jlabel4.setBackground(new Color(204,204,204));
-      jlabel4.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel4.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel4.setOpaque(true);
       jlabel4.setText("Started");
       jpanel1.add(jlabel4,new CellConstraints(8,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
@@ -256,7 +256,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel5 = new JLabel();
       jlabel5.setBackground(new Color(204,204,204));
-      jlabel5.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel5.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel5.setOpaque(true);
       jlabel5.setText("Stopped");
       jpanel1.add(jlabel5,new CellConstraints(10,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
@@ -271,21 +271,21 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel6 = new JLabel();
       jlabel6.setBackground(new Color(204,204,204));
-      jlabel6.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel6.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel6.setOpaque(true);
       jlabel6.setText("PID");
       jpanel1.add(jlabel6,new CellConstraints(16,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
 
       JLabel jlabel7 = new JLabel();
       jlabel7.setBackground(new Color(204,204,204));
-      jlabel7.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel7.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel7.setOpaque(true);
       jlabel7.setText("Started");
       jpanel1.add(jlabel7,new CellConstraints(18,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
 
       JLabel jlabel8 = new JLabel();
       jlabel8.setBackground(new Color(204,204,204));
-      jlabel8.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel8.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel8.setOpaque(true);
       jlabel8.setText("Trigger");
       jpanel1.add(jlabel8,new CellConstraints(20,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
@@ -346,7 +346,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel9 = new JLabel();
       jlabel9.setBackground(new Color(204,204,204));
-      jlabel9.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel9.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel9.setOpaque(true);
       jlabel9.setText("PID");
       jlabel9.setHorizontalAlignment(JLabel.LEFT);
@@ -354,7 +354,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel10 = new JLabel();
       jlabel10.setBackground(new Color(204,204,204));
-      jlabel10.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel10.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel10.setOpaque(true);
       jlabel10.setText("Timer");
       jlabel10.setHorizontalAlignment(JLabel.LEFT);
@@ -362,7 +362,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel11 = new JLabel();
       jlabel11.setBackground(new Color(204,204,204));
-      jlabel11.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel11.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel11.setOpaque(true);
       jlabel11.setText("Condition");
       jlabel11.setHorizontalAlignment(JLabel.LEFT);
@@ -370,7 +370,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel12 = new JLabel();
       jlabel12.setBackground(new Color(204,204,204));
-      jlabel12.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel12.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel12.setOpaque(true);
       jlabel12.setText("Type");
       jlabel12.setHorizontalAlignment(JLabel.LEFT);
@@ -378,7 +378,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel13 = new JLabel();
       jlabel13.setBackground(new Color(204,204,204));
-      jlabel13.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel13.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel13.setOpaque(true);
       jlabel13.setText("CPU");
       jlabel13.setHorizontalAlignment(JLabel.LEFT);
@@ -390,7 +390,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel14 = new JLabel();
       jlabel14.setBackground(new Color(204,204,204));
-      jlabel14.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel14.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel14.setOpaque(true);
       jlabel14.setText("Memory");
       jlabel14.setHorizontalAlignment(JLabel.LEFT);
@@ -402,7 +402,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel15 = new JLabel();
       jlabel15.setBackground(new Color(204,204,204));
-      jlabel15.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel15.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel15.setOpaque(true);
       jlabel15.setText("Handles");
       jlabel15.setHorizontalAlignment(JLabel.LEFT);
@@ -414,7 +414,7 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel16 = new JLabel();
       jlabel16.setBackground(new Color(204,204,204));
-      jlabel16.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel16.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel16.setOpaque(true);
       jlabel16.setText("Threads");
       jlabel16.setHorizontalAlignment(JLabel.LEFT);
@@ -430,14 +430,14 @@ public class ConsoleForm extends JPanel
 
       JLabel jlabel17 = new JLabel();
       jlabel17.setBackground(new Color(204,204,204));
-      jlabel17.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel17.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel17.setOpaque(true);
       jlabel17.setText("Restarts");
       jpanel1.add(jlabel17,new CellConstraints(12,13,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
 
       JLabel jlabel18 = new JLabel();
       jlabel18.setBackground(new Color(204,204,204));
-      jlabel18.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel18.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel18.setOpaque(true);
       jlabel18.setText("Exit Code");
       jpanel1.add(jlabel18,new CellConstraints(12,9,1,1,CellConstraints.FILL,CellConstraints.DEFAULT));
@@ -480,7 +480,7 @@ public class ConsoleForm extends JPanel
       jpanel1.add(_DUMP_HEAP_BUTTON,cc.xy(10,17));
 
       JLabel jlabel19 = new JLabel();
-      jlabel19.setFont(new Font("Tahoma",Font.BOLD,11));
+      jlabel19.setFont(new Font("Dialog",Font.BOLD,11));
       jlabel19.setText("Filter");
       jpanel1.add(jlabel19,cc.xy(12,2));
 
